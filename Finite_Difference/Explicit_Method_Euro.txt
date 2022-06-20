@@ -1,0 +1,7 @@
+// Author: Taimur Moolji
+// Date: Jun 19 2022
+// Pricing a Vanilla European style option using FDM (Explicit Euler Method) and the Black-Scholes equation
+// Guided by : https://www.quantstart.com/articles/C-Explicit-Euler-Finite-Difference-Method-for-Black-Scholes/
+
+
+
