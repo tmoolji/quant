@@ -1,0 +1,20 @@
+//Author: Taimur Moolji
+//Date: Jun 22 2022
+//Exercise from : https://www.quantstart.com/articles/C-Explicit-Euler-Finite-Difference-Method-for-Black-Scholes/
+
+#ifndef __VANILLA_OPTION_CPP
+#define __VANILLA_OPTION_CPP
+
+#include "option.h"
+
+VanillaOption::VanillaOption(){}
+
+VanillaOption::VanillaOption(double _K, double _r, double _T, double _sigma, PayOff* _pay_off) {
+  K = _K;
+  r = _r;
+  T = _T;
+  sigma = _sigma;
+  PayOff = _pay_off;
+}
+
+#endif
