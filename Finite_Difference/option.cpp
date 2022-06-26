@@ -14,7 +14,7 @@ VanillaOption::VanillaOption(double _K, double _r, double _T, double _sigma, Pay
   r = _r;
   T = _T;
   sigma = _sigma;
-  PayOff = _pay_off;
+  pay_off = _pay_off;
 }
 
 #endif

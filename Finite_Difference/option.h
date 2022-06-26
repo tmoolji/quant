@@ -17,7 +17,7 @@ public:
   double sigma; //Volatility
 
   VanillaOption();
-  VanillaOption(double _K, double _r, double _T, double _sigma, PayOff* _pay_off)
+  VanillaOption(double _K, double _r, double _T, double _sigma, PayOff* _pay_off);
 
 };
 

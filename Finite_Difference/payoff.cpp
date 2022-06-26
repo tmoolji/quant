@@ -9,31 +9,22 @@
 
 PayOff::PayOff() {}
 
-// Define call class
+// Constructor with single strike parameter
+PayOffCall::PayOffCall(const double& _K) { K = _K; }
 
-
-//Call Constructor
-//param: _K - Strike
-PayOffCall::PayOffCall(const double& _K) {
-  K = _K;
+// Over-ridden operator() method, which turns PayOffCall into a function object
+double PayOffCall::operator() (const double& S) const {
+  return std::max(S-K, 0.0); // Standard European call pay-off
 }
 
-//Overridden operator() - returns payoff
-//param S - Stock Price
-double PayOffCall::operator()(const double& S) const {
-  return std::max(S-K, 0.0);
-}
-
-//Put Constructor
-//param: _K - Strike
+// Constructor with single strike parameter
 PayOffPut::PayOffPut(const double& _K) {
   K = _K;
 }
 
-//Overridden operator() - returns payoff
-//param S - Stock Price
-double PayOffPut::operator()(const double& S) const {
-  return std::max(K-S, 0.0);
+// Over-ridden operator() method, which turns PayOffPut into a function object
+double PayOffPut::operator() (const double& S) const {
+  return std::max(K-S, 0.0); // Standard European put pay-off
 }
 
 #endif

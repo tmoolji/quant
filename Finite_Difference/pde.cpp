@@ -23,13 +23,13 @@ double BlackScholesPDE::diff_coeff(double t, double x) const {
 //Diffusion coefficient
 //Coeff on delta
 double BlackScholesPDE::conv_coeff(double t, double x) const {
-  return (option->r)*x //rS
+  return (option->r)*x; //rS
 }
 
 //Zero-term coefficient
 //Coefficient for discounting
 double BlackScholesPDE::zero_coeff(double t, double x) const {
-  return -(option->r) // -r
+  return -(option->r); // -r
 }
 
 //Source coefficient
@@ -49,3 +49,5 @@ double BlackScholesPDE::boundary_right(double t, double x) const {
 double BlackScholesPDE::init_cond(double x) const {
   return option->pay_off->operator()(x); //initial condition for a vanilla call
 }
+
+#endif
