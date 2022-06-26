@@ -1,3 +1,8 @@
+#Author: Taimur Moolji
+#Date: Jun 23 2022
+#Exercise from : https://www.quantstart.com/articles/C-Explicit-Euler-Finite-Difference-Method-for-Black-Scholes/
+
+
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib
 import numpy as np
